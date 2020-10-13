@@ -6,9 +6,7 @@
     background-color: #590e9e;
 }
 
-.btn-light {
-    border-radius: 20px;
-}
+
 
 .list-group-item-action {
     width: 80%;
@@ -68,4 +66,9 @@
     color: #fff;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+    width: 80%;
+}
+
+.btn-light {
+    border-radius: 20px;
 }

@@ -4,3 +4,13 @@
     border-radius: 20px;
     width: 50%;
 }
+
+.btn-light {
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    #email {
+        margin-top: 25px;
+    }
+}

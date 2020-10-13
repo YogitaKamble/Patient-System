@@ -132,6 +132,11 @@ p {
     font-size: 28px;
 }
 
+.fa-tint {
+    padding: 0px 13px;
+    font-size: 28px;
+}
+
 .fa-id-card-o {
     font-size: 28px;
     padding: 8px 7px;
@@ -153,10 +158,6 @@ body {
 
 .navbar {
     background-color: #590e9e;
-}
-
-.btn-light {
-    border-radius: 20px;
 }
 
 .list-group-item-action {
@@ -215,9 +216,6 @@ body {
     }
     #wrapper.toggled #sidebar-wrapper {
         margin-left: -15rem;
-    }
-    #email {
-        margin-top: 25px;
     }
 }
 
