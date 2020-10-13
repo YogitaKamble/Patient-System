@@ -1,0 +1,59 @@
+<!-- Page Content -->
+<div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <button class="btn btn-light">Patient System</button><span class="navbar-toggler-icon" id="menu-toggle"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+                <li class="nav-item ">
+                    <a class="nav-link text-light" href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#"><i class="fa fa-bell" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <div class="logo-wrapper sn-ad-avatar-wrapper">
+                    <a href="#"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-fluid"><br><span class="text-dark">Lorem ipsum<br>Admin</span></a>
+                </div>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action active" routerLink="/patient"><i class="fa fa-tint" aria-hidden="true"></i>
+                    Patient</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fa fa-user" aria-hidden="true"></i>
+                    Logout</a>
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <app-details></app-details>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col">
+                    <app-list></app-list>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>

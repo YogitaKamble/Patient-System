@@ -1,0 +1,141 @@
+<div class="panel p-2">
+    <div class="card p-2">
+        <header class="card-header">
+            <h4 class="card-title mt-2">Patient Details</h4>
+        </header>
+        <article class="card-body">
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <!-- row 1 -->
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label>First name </label>
+                        <input type="text" class="form-control" formControlName="fname" id="fname" [(ngModel)]="firstname">
+                        <div *ngIf="f.fname.touched && f.fname.invalid" class="alert alert-danger">
+                            <div *ngIf="f.fname.errors.required">Name is required</div>
+                            <div *ngIf="f.fname.errors.pattern">Name not valid</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="col form-group">
+                        <label>Last name</label>
+                        <input type="text" class="form-control" formControlName="lname" id="lname" [(ngModel)]="lastname">
+                        <div *ngIf="f.lname.touched && f.lname.invalid" class="alert alert-danger">
+                            <div *ngIf="f.lname.errors.required">LastName is required</div>
+                            <div *ngIf="f.lname.errors.pattern">LastName not valid</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col form-group">
+                        <label>Phone </label>
+                        <input type="number" class="form-control" formControlName="phn" id="phn" [(ngModel)]="phone">
+                        <div *ngIf="f.phn.touched && f.phn.invalid" class="alert alert-danger">
+                            <div *ngIf="f.phn.errors.required ">Phone is required</div>
+                            <div *ngIf="f.phn.errors.pattern || f.phn.errors.maxlength || f.phn.errors.minlength">Number not valid</div>f.phonenumber.errors.maxlength
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+
+                </div>
+                <!-- row 2-->
+
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label>Email </label>
+                        <input type="email" class="form-control" formControlName="email" id="email" [(ngModel)]="emailid">
+                        <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.pattern">Email not valid</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col form-group">
+                        <label>Address Line1</label>
+                        <input type="address" class="form-control" formControlName="add1" id="add1" [(ngModel)]="Address1">
+                        <div *ngIf="f.add1.touched && f.add1.invalid" class="alert alert-danger">
+                            <div *ngIf="f.add1.errors.required">Address is required</div>
+                        </div>
+                    </div>
+                    <div class="col form-group">
+                        <label>Address Line2 </label>
+                        <input type="address" class="form-control" formControlName="add2" id="add2" [(ngModel)]="Address2">
+                        <div *ngIf="f.add2.touched && f.add2.invalid" class="alert alert-danger">
+                            <div *ngIf="f.add2.errors.required">Address is required</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row-3 -->
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label>City </label>
+                        <input type="text" class="form-control" formControlName="city" id="city" [(ngModel)]="cityname">
+                        <div *ngIf="f.city.touched && f.city.invalid" class="alert alert-danger">
+                            <div *ngIf="f.city.errors.required">City is required</div>
+                            <div *ngIf="f.city.errors.pattern">City not valid</div>
+                        </div>
+                    </div>
+                    <div class="col form-group">
+                        <label>State</label>
+                        <input type="text" class="form-control" formControlName="state" id="state" [(ngModel)]="Statename">
+                        <div *ngIf="f.state.touched && f.state.invalid" class="alert alert-danger">
+                            <div *ngIf="f.state.errors.required">State is required</div>
+                            <div *ngIf="f.state.errors.pattern">State not valid</div>
+                        </div>
+                    </div>
+                    <div class="col form-group">
+                        <label>Zip </label>
+                        <input type="number" class="form-control" formControlName="zip" id="zip" ng-minlength="6" ng-maxlength="6" [(ngModel)]="zipcode">
+                        <div *ngIf="f.zip.touched && f.zip.invalid" class="alert alert-danger">
+                            <div *ngIf="f.zip.errors.required">Zip is required</div>
+                            <div *ngIf="f.zip.errors.pattern || f.zip.errors.maxlength || f.zip.errors.minlength">Zip not valid </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- submit -->
+                <div class="form-group d-flex">
+                    <button type="submit" class="btn text-light btn-block" [disabled]="!form.valid" (click)="submit()"> Add  </button>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalCenter" [disabled]="!form.valid"> Patient Details</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header text-light">
+                                    <h5 class="modal-title" id="ModalLongTitle">Patient Details</h5>
+                                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row p-3 ">
+                                        <div class="col p-2 border ">
+                                            <p><label class="font-weight-bold">First Name : </label> {{this.firstname}}</p>
+                                            <p><label class="font-weight-bold">Last Name :</label> {{this.lastname}}</p>
+                                            <p><label class="font-weight-bold">Phone Number :</label> {{this.phone}}</p>
+                                            <p><label class="font-weight-bold">Emaail Address :</label> {{this.emailid}}</p>
+                                            <p><label class="font-weight-bold">Address Line 1 :</label> {{this.Address1}}</p>
+                                            <p><label class="font-weight-bold">Address Line 2 :</label> {{this.Address2}}</p>
+                                            <p><label class="font-weight-bold">City Name :</label> {{this.cityname}}</p>
+                                            <p><label class="font-weight-bold">State Name :</label> {{this.Statename}}</p>
+                                            <p><label class="font-weight-bold">ZipCode : </label> {{this.zipcode}}</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </article>
+        <div class="clearfix"></div>
+    </div>
+</div>

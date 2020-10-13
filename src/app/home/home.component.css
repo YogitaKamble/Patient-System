@@ -1,0 +1,118 @@
+/* .title,
+p {
+    text-align: center;
+} */
+
+.nav-item {
+    margin: 0 20px 0 10px;
+}
+
+.navbar-light {
+    color: black
+}
+
+.active {
+    background-color: #303271;
+    color: #fff;
+}
+
+
+/* .masthead {
+    height: 70vh;
+    min-height: 600px;
+    background-image: linear-gradient(0deg, #1172da, rgb(32 34 68 / 30%)), url('../../assets/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+
+/* .h-110 {
+    height: 110%!important;
+} */
+
+.btn {
+    background: linear-gradient(to right, #0000cc 0%, #660066 100%);
+}
+
+
+/* .services {
+    background-color: #e9edf1;
+} */
+
+.p-5 {
+    padding: 8rem!important;
+}
+
+.navbar-light {
+    top: 30px;
+}
+
+
+/* 
+.fa,
+.contact {
+    padding: 0 10px 0 10px;
+}
+
+.dot {
+    height: 45px;
+    width: 45px;
+    background: linear-gradient(to bottom right, #0099cc 0%, #660066 100%);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-right {
+    float: right;
+}
+
+.dot-left {
+    float: left;
+}
+
+.square {
+    height: 45px;
+    width: 45px;
+    background: linear-gradient(to bottom right, #0099cc 0%, #660066 100%);
+    border-radius: 10%;
+    display: inline-block;
+} */
+
+.ml-2 {
+    display: inline-block;
+}
+
+.fa-bell {
+    padding: 8px 8px;
+    font-size: 28px;
+}
+
+
+/* .card-body .text {
+    padding: 65px;
+} */
+
+@media only screen and (max-width: 600px) {
+    .btn-block {
+        width: auto;
+    }
+    /* .dot-right,
+    .dot-left {
+        float: none;
+    } */
+    .text-right,
+    .text-left {
+        text-align: center!important;
+    }
+    /* .card-body .text {
+        padding: 40px!important;
+    } */
+    /* .square {
+        margin-left: 25%;
+    }
+    .dot {
+        margin-left: 40%;
+        ;
+    } */
+}

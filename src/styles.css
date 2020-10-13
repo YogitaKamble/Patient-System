@@ -1,0 +1,246 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+@import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@font-face {
+    font-family: Alergia;
+    src: url('./assets/font/EM-Alergia.Grotesk/AlergiaCondensed-Medium.otf') format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Alergia', 'arial', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .ag-theme-alpine {
+        width: auto!important;
+    }
+}
+
+.modal-header {
+    background: linear-gradient(to right, #0000cc 0%, #660066 100%);
+}
+
+.modal-body {
+    background: #e9edf1;
+}
+
+.title,
+p {
+    text-align: center;
+}
+
+.nav-item {
+    margin: 0 20px 0 10px;
+}
+
+.navbar-light {
+    color: black
+}
+
+.active {
+    background-color: #303271;
+    color: #fff;
+}
+
+.masthead {
+    height: 70vh;
+    min-height: 600px;
+    background-image: linear-gradient(0deg, #1172da, rgb(32 34 68 / 30%)), url('assets/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.h-110 {
+    height: 110%!important;
+}
+
+.services {
+    background-color: #e9edf1;
+}
+
+.dot {
+    height: 45px;
+    width: 45px;
+    background: linear-gradient(to bottom right, #0099cc 0%, #660066 100%);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-right {
+    float: right;
+}
+
+.dot-left {
+    float: left;
+}
+
+.square {
+    height: 45px;
+    width: 45px;
+    background: linear-gradient(to bottom right, #0099cc 0%, #660066 100%);
+    border-radius: 10%;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-block {
+        width: auto;
+    }
+    .dot-right,
+    .dot-left {
+        float: none;
+    }
+    .text-right,
+    .text-left {
+        text-align: center!important;
+    }
+    .card-body .text {
+        padding: 40px!important;
+    }
+    .square {
+        margin-left: 25%;
+    }
+    .dot {
+        margin-left: 40%;
+        ;
+    }
+}
+
+.ml-2 {
+    display: inline-block;
+}
+
+.fa-envelope-o,
+.fa-diamond {
+    padding: 8px 8px;
+    font-size: 28px;
+}
+
+.fa-bolt,
+.fa-user,
+.fa-map-marker,
+.fa-check-square-o,
+.fa-file-text-o,
+.fa-arrow-right {
+    padding: 8px 13px;
+    font-size: 28px;
+}
+
+.fa-id-card-o {
+    font-size: 28px;
+    padding: 8px 7px;
+}
+
+.card-body .text {
+    padding: 65px;
+}
+
+
+/* home end */
+
+
+/* patient */
+
+body {
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #590e9e;
+}
+
+.btn-light {
+    border-radius: 20px;
+}
+
+.list-group-item-action {
+    width: 80%;
+}
+
+.rounded-circle {
+    width: 100px;
+}
+
+
+/* .active {
+    background: linear-gradient(to right, #3c3cca 0%, #651e65 100%);
+    color: #fff;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+} */
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+.container-fluid {
+    background-color: #e9edf1;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+    #email {
+        margin-top: 25px;
+    }
+}
+
+
+/* patient end */
+
+
+/* footer */
+
+.social-network {
+    margin-left: -10px;
+}
+
+.d-flex li {
+    list-style: none;
+    padding: 0 10px 0 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .social-network {
+        margin-left: 15px;
+    }
+}
+
+
+/* footer end*/

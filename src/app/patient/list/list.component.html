@@ -1,0 +1,51 @@
+<div class="panel p-2">
+    <div class="card p-2">
+        <header class="card-header">
+            <h4 class="card-title mt-2">Patient List</h4>
+            <input id="filter-text-box" placeholder="Search" autocomplete="off" (keyup)="onFilterTextBoxChanged()" />
+
+        </header>
+
+
+        <div class="card-body p-2">
+            <ag-grid-angular style="width: 500px; height: 335px;" class="ag-theme-alpine" [gridOptions]="gridOptions" [rowData]="rowData" [columnDefs]="columnDefs" (gridReady)="onGridReady($event)" setQuickFilter="searchValue">
+            </ag-grid-angular>
+
+            <div class="modal fade" id="ListModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-light">
+                            <h5 class="modal-title" id="ModalLongTitle">Patient Details</h5>
+                            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row p-3 ">
+                                <div class="col p-4 border text-center ">
+                                    <label class="font-weight-bold ">First Name : </label>
+                                    <div class="clearfix"></div><input type="text"><br>
+
+                                    <label class="font-weight-bold">Last Name : </label>
+                                    <div class="clearfix"></div> <input type="text"><br>
+                                    <!-- <div class="clearfix"></div> -->
+                                    <label class="font-weight-bold">Address : </label>
+                                    <div class="clearfix"></div> <input type="text"><br>
+                                    <!-- <div class="clearfix"></div> -->
+                                    <div class="row justify-content-center my-2">
+                                        <button type="button" class="btn btn-primary">Update</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

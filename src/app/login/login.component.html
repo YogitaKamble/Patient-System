@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4 mt-4">
+            <div class="card text-center">
+                <div class="card-header d-flex justify-content-center">
+                    <img src="assets/img/personal-information-5.png" alt="logo" class="img-fluid mr-2">
+                    <h4 class="card-title mt-2 text-light">Patient System</h4>
+                </div>
+                <div class="card-body">
+                    <h4 class="text-dark">Login to Your Account</h4>
+                    <article class="card-body">
+                        <form [formGroup]="form" (ngSubmit)="submit()">
+                            <div class="form-group">
+                                <input type="email" class="form-control" formControlName="email" id="email" [(ngModel)]="emailid" placeholder="Email Address">
+                                <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+                                    <div *ngIf="f.email.errors.required">Email-ID is required</div>
+                                    <div *ngIf="f.email.errors.pattern">Email-ID is not Valid </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" formControlName="pswd" id="pswd" [(ngModel)]="password" placeholder="Password">
+                                <div *ngIf="f.pswd.touched && f.pswd.invalid" class="alert alert-danger">
+                                    <div *ngIf="f.pswd.errors.required">password Required</div>
+                                    <div *ngIf="f.pswd.errors.pattern">Use Combination of Special Character,Uppercase,Lowercase</div>
+                                </div>
+                            </div>
+                            <div class="checkbox float-left">
+                                <label><input type="checkbox" name="remember"> Remember me</label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block" [disabled]="!form.valid" (click)="submit()">Login </button>
+                            </div>
+
+                        </form>
+                    </article>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<br>
